@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5313329434381630381}
   - component: {fileID: 3588471031059561627}
   - component: {fileID: -899571478306237964}
+  - component: {fileID: -718825648349780163}
   m_Layer: 0
   m_Name: RandomDots
   m_TagString: Dot
@@ -128,3 +129,19 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_Radius: 0.5
+--- !u!114 &-718825648349780163
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6302798993890521273}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8a34f526a11d0540a0b92217c2c7126, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ObjectFollower
+  target: {fileID: 0}
+  offset: {x: 0, y: 2, z: -5}
+  smoothTime: 0.2
+  lookAtTarget: 0

@@ -79,10 +79,8 @@ public class PlayerControl : MonoBehaviour
                     newCameraPos.z -= CameraGrowthAmount;
                     Camera.main.transform.position = newCameraPos;
 
-                    // destroy dots and edit the  values
-                    SpawnManager.activeDotsCounter -= 1;
-                    Destroy(other.gameObject);
-                    SpawnManager.destroyedDotsCounter += 1;
+                    // return dot to pool instead of destroying it
+                    SpawnManager.instance.ReturnDotToPool(other.gameObject);
                 }
             }
             // change the layer depend on size
@@ -91,7 +89,7 @@ public class PlayerControl : MonoBehaviour
                 SpriteRenderer dotRenderer = other.GetComponent<SpriteRenderer>();
                 if (dotRenderer != null)
                 {
-                    dotRenderer.sortingOrder = 3; 
+                    dotRenderer.sortingOrder = 3;
                 }
             }
         }
@@ -105,7 +103,7 @@ public class PlayerControl : MonoBehaviour
             SpriteRenderer dotRenderer = other.GetComponent<SpriteRenderer>();
             if (dotRenderer != null)
             {
-                dotRenderer.sortingOrder = 1; 
+                dotRenderer.sortingOrder = 1;
             }
         }
     }
